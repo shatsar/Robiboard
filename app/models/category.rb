@@ -1,6 +1,4 @@
 class Category < ActiveRecord::Base
   attr_accessible :title
-
-  belongs_to :category
-  has_many   :categories
+  acts_as_nested_set
 end

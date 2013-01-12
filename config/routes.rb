@@ -1,4 +1,7 @@
 Robiboard::Application.routes.draw do
+  resources :categories
+
+
   resources :bookmarks
 
 

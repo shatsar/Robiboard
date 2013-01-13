@@ -24,6 +24,10 @@
     <%= f.text_field :image_url %>
   </div>
   <div class="field">
+    <%= f.label :snapshot %><br />
+    <%= f.file_field :snapshot %>
+  </div>
+  <div class="field">
     <%= f.label :category_id %><br />
 	<%= f.select :category_id, nested_set_options(Category, @category) {|i, level| "#{'-' * level} #{i.title}" } %>
   </div>

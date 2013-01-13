@@ -19,6 +19,10 @@
 	<b>Category:</b>
   	<%= link_to @bookmark.category.title, @bookmark.category %>
 </p>
+<p>
+	<%= image_tag @bookmark.snapshot.url(:medium) %>
+</p>
+
 
 
 <%= link_to 'Edit', edit_bookmark_path(@bookmark) %> |

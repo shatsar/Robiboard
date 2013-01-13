@@ -23,6 +23,11 @@
     <%= f.label :image_url %><br />
     <%= f.text_field :image_url %>
   </div>
+  <div class="field">
+    <%= f.label :category_id %><br />
+	<%= f.select :category_id, nested_set_options(Category, @category) {|i, level| "#{'-' * level} #{i.title}" } %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

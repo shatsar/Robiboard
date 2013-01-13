@@ -11,12 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130113032249) do
+ActiveRecord::Schema.define(:version => 20130113204514) do
 
   create_table "bookmarks", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.string   "image_url"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
     t.integer  "category_id"
@@ -24,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20130113032249) do
     t.string   "snapshot_content_type"
     t.integer  "snapshot_file_size"
     t.datetime "snapshot_updated_at"
+    t.string   "url"
   end
 
   create_table "categories", :force => true do |t|

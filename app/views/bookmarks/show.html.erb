@@ -25,6 +25,6 @@
 
 
 
-<%= link_to 'Edit', edit_bookmark_path(@bookmark) %> |
-<%= link_to 'Destroy', @bookmark, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Back', bookmarks_path %>
+<%= link_to 'Edit', edit_bookmark_path(@bookmark), :class => "btn" %>
+<%= link_to 'Destroy', @bookmark, method: :delete, :class => "btn", data: { confirm: 'Are you sure?' } %> 
+<%= link_to 'Back', bookmarks_path, :class => "btn" %>

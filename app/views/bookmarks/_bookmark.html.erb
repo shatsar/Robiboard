@@ -1,8 +1,7 @@
-  <tr>
-    <td><%= bookmark.title %></td>
-    <td><%= bookmark.description %></td>
-    <td><%= bookmark.url %></td>
-    <td><%= link_to 'Show', bookmark %></td>
-    <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
-    <td><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<div class="bookmark">
+	<h3><%= link_to bookmark.title, bookmark %></h3>
+	<p>
+		<%= image_tag bookmark.snapshot.url(:medium) %>
+	</p>
+	<p><%= bookmark.description %></p>	
+</div> 

@@ -1,3 +1,10 @@
 // Place all the styles related to the Bookmarks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.bookmark {
+  float: left;
+  min-width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #a0a0a0;
+}

@@ -1,4 +1,7 @@
 <%= form_for(@bookmark) do |f| %>
+	<fieldset>
+		
+	<legend>Bookmark</legend>
   <% if @bookmark.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@bookmark.errors.count, "error") %> prohibited this bookmark from being saved:</h2>
@@ -10,29 +13,20 @@
       </ul>
     </div>
   <% end %>
+	  <%= f.label :description %>
+      <%= f.text_area :description, :rows=>5 %>
+  	
+  	  <%= f.label :url %>
+     	<%= f.text_field :url %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </div>
-   <div class="field">
     <%= f.label :snapshot %><br />
     <%= f.file_field :snapshot %>
-  </div>
-  <div class="field">
-    <%= f.label :category_id %><br />
+    
+    <%= f.label :category_id %>
 	<%= f.select :category_id, nested_set_options(Category, @category) {|i, level| "#{'-' * level} #{i.title}" } %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit :class=>"btn btn-primary" %>
   </div>
+	</fieldset>
 <% end %>

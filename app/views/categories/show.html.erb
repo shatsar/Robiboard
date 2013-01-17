@@ -12,8 +12,10 @@
 </p>
 
 <p>
-	<%= render @category.bookmarks %>
+	<%= render @bookmarks %>
 </p>
+
+<%= will_paginate @bookmarks %>
 
 <%= link_to 'Edit', edit_category_path(@category), :class => "btn" %>
 <%= link_to 'Back', categories_path, :class => "btn" %>

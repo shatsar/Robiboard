@@ -19,9 +19,12 @@
   	  <%= f.label :url %>
      	<%= f.text_field :url %>
 
-    <%= f.label :snapshot %><br />
+    <%= f.label :snapshot %>
     <%= f.file_field :snapshot %>
     
+	or
+    <%= text_field_tag "image_url" %>
+	
     <%= f.label :category_id %>
 	<%= f.select :category_id, nested_set_options(Category, @category) {|i, level| "#{'-' * level} #{i.title}" } %>
 

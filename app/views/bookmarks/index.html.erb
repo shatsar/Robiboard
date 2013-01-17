@@ -1,7 +1,5 @@
-<h1>Listing bookmarks</h1>
+<div id="bookmarks-container">
+<%= render @bookmarks %>
+</div>
 
-<% @bookmarks.each do |bookmark| %>
-	<%= render bookmark %>
-<% end %>
-
-<br />
+<%= will_paginate @bookmarks %>

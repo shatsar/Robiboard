@@ -12,9 +12,7 @@
 </p>
 
 <p>
-<% @category.bookmarks.each do |bookmark| %>
-	<%= render bookmark%>
-<% end %>
+	<%= render @category.bookmarks %>
 </p>
 
 <%= link_to 'Edit', edit_category_path(@category), :class => "btn" %>

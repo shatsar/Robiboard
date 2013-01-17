@@ -41,7 +41,7 @@ class BookmarksController < ApplicationController
   # POST /bookmarks.json
   def create
     @bookmark = Bookmark.new(params[:bookmark])
-    if params[:image_url]
+    unless params[:image_url].empty?
         @bookmark.load_snapshot params[:image_url] 
     end
     

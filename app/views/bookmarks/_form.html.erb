@@ -13,16 +13,18 @@
       </ul>
     </div>
   <% end %>
+  	  <%= f.label :url %>
+     	<%= f.text_field :url %>
+
 	  <%= f.label :description %>
       <%= f.text_area :description, :rows=>5 %>
   	
-  	  <%= f.label :url %>
-     	<%= f.text_field :url %>
 
     <%= f.label :snapshot %>
     <%= f.file_field :snapshot %>
     
 	or
+	
     <%= text_field_tag "image_url" %>
 	
     <%= f.label :category_id %>

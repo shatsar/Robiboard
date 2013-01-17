@@ -41,7 +41,10 @@ class BookmarksController < ApplicationController
   # POST /bookmarks.json
   def create
     @bookmark = Bookmark.new(params[:bookmark])
-
+    if params[:image_url]
+        @bookmark.load_snapshot params[:image_url] 
+    end
+    
     respond_to do |format|
       if @bookmark.save
         format.html { redirect_to @bookmark, notice: 'Bookmark was successfully created.' }

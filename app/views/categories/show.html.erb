@@ -5,17 +5,18 @@
   <%= @category.title %>
 </p>
 
+<%= link_to 'Edit', edit_category_path(@category), :class => "btn" %>
+
 <p>
+			<b>Sub-categories:</b> </br>
 <% @category.children.each do |category| %>
   <%= link_to category.title, category %>
 <% end %>
 </p>
 
-<p>
+<div id="bookmarks-container">
 	<%= render @bookmarks %>
-</p>
+</div>
 
 <%= will_paginate @bookmarks %>
 
-<%= link_to 'Edit', edit_category_path(@category), :class => "btn" %>
-<%= link_to 'Back', categories_path, :class => "btn" %>

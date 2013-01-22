@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+	color: #333;
 }
  
 #wrap {
@@ -13,4 +14,10 @@ body {
 footer {
     height: 30px;
 	text-align: center;
+}
+
+footer {
+	border-top: 1px #d0d2d9 solid;
+	padding-top: 5px;
+	color: #888;
 }

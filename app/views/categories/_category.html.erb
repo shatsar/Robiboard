@@ -1,6 +1,6 @@
 <div class="category">
 	<p>
-
+		<%= image_tag(category.bookmarks.last.snapshot.url(:medium), :class => "img-rounded") unless category.bookmarks.empty? %>
 	</p>
 	<p><%= category.title %></p>
 	<p><%= link_to "view", category %></p>

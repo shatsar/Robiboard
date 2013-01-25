@@ -1,5 +1,10 @@
-<%= render @categories %>
-
-<br />
-
-<%= link_to 'New Category', new_category_path %>
+<div class="row">
+	<div class="span2">
+		<%= link_to 'New Category', new_category_path, :class => "btn" %>
+	</div>
+</div>
+<div class="row">
+	<div class="span12">
+		<%= render @categories %>
+	</div>
+</div>

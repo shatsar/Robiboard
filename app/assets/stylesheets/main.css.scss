@@ -26,3 +26,8 @@ footer {
 .clear {
 	clear : both;
 }
+
+body {
+	background-image: image-url("background.png");
+	background-repeat: repeat; 
+}

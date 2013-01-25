@@ -7,12 +7,10 @@
 
 <%= link_to 'Edit', edit_category_path(@category), :class => "btn" %>
 
-<p>
-			<b>Sub-categories:</b> </br>
-<% @category.children.each do |category| %>
-  <%= link_to category.title, category %>
-<% end %>
-</p>
+<div id="subcategories-container">
+	<b>Sub-categories:</b> </br>
+	<%= render @category.children %>
+</div>
 
 <div id="bookmarks-container">
 	<%= render @bookmarks %>

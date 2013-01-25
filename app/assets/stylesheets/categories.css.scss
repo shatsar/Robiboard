@@ -1,3 +1,20 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$amount: 6px;
+
+.category {
+  float: left;
+  width: 100px;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #c0c0c0;
+  border-radius: $amount;
+  -moz-border-radius: $amount;
+  -webkit-border-radius: $amount;
+}
+
+#subcategories-container {
+	float: left;
+	clear:both;
+}

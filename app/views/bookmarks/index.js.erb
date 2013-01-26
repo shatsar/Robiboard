@@ -1,0 +1,6 @@
+$("#bookmarks-container").append("<%= j render(@bookmarks) %>").masonry( 'reload' );
+<% if @bookmarks.next_page %>
+$('.pagination').replaceWith('<%= j will_paginate(@bookmarks) %>');
+<% else %>
+$('.pagination').remove();
+<% end %>

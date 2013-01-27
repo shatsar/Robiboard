@@ -1,8 +1,14 @@
-<div class="row">
-<%= render @categories %>
+<span id="notice"><%= notice %></span>
+
+<div class="row-fluid">
+	<div class="span12">
+		<%= render @categories %>
+	</div>
 </div>
-<div class="row">
-	<div id="bookmark-container">
-	<%= render @bookmarks %>
+<div class="row-fluid">
+	<div class="span12">
+		<div id="bookmarks-container">
+				<%= render @bookmarks %>
+		</div>
 	</div>
 </div>

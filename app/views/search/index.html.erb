@@ -1,8 +1,8 @@
-<% @categories.each do |category| %>
-    <%= category.title %></td>
-    <%= link_to 'Show', category %>
-<% end %>
-
-<div id="bookmark-container">
-<%= render @bookmarks %>
+<div class="row">
+<%= render @categories %>
+</div>
+<div class="row">
+	<div id="bookmark-container">
+	<%= render @bookmarks %>
+	</div>
 </div>

@@ -2,7 +2,7 @@ class BookmarksController < ApplicationController
   # GET /bookmarks
   # GET /bookmarks.json
   def index
-    @bookmarks = Bookmark.paginate(:page => params[:page])
+    @bookmarks = Bookmark.paginate(:page => params[:page], :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb

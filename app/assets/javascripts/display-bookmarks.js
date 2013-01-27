@@ -1,7 +1,7 @@
 $(window).load(function(){
   $('#bookmarks-container').masonry({
     itemSelector : '.bookmark',
-    columnWidth : 5
+    columnWidth : 0
   });
 })
 

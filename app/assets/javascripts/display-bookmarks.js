@@ -1,9 +1,12 @@
 $(window).load(function(){
   $('#bookmarks-container').masonry({
-    itemSelector : '.bookmark',
-    columnWidth : 0
+    itemSelector : '.bookmark'
   });
 })
+
+$(window).resize(function() {
+	$("#bookmarks-container").masonry( 'reload' );
+});
 
 var isExecuting = false;
 $(function() {

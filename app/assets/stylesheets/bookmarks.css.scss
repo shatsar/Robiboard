@@ -8,7 +8,7 @@ $amount: 6px;
   float: left;
   margin: 3px;
   padding: 3px;
-  border: 1px solid #c0c0c0;
+  border: 1px solid #d2d2d2;
   border-radius: $amount;
   -moz-border-radius: $amount;
   -webkit-border-radius: $amount;
@@ -16,6 +16,10 @@ $amount: 6px;
   min-width: 200px;
   max-width: 320px;
   width: 23%;
+  
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .bookmark p {

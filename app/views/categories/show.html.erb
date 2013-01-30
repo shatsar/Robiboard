@@ -1,11 +1,16 @@
+<% unless @category.ancestors.empty? %>
 <div class="row-fluid">
 	<ul class="breadcrumb">
-	<% @category.ancestors.each do |ancestor, index|%>
-		<li><%= link_to ancestor.title, ancestor %></li>
+	<% @category.ancestors.each do |ancestor|%>
+		<li>
+			<%= link_to ancestor.title, ancestor %>
+			<span class="divider">&gt;</span>
+		</li>
 	<% end%>
+		<li class="active"><%= @category.title %></li>
 	</ul>
 </div>
-
+<% end%>
 
 <div class="row-fluid">
 	<div class="span6">

@@ -1,23 +1,30 @@
-<p>
-  <b>Description:</b>
-  <%= @bookmark.description %>
-</p>
-<p>
-  <b>Url:</b>
-  <%= @bookmark.url %>
-</p>
-
-
-<p>
+<div class="row-fluid">
+	<div class="span12">
+	  <h3><%= @bookmark.description %></h3>
+  	</div>
+</div>
+<div class="row-fluid">
+	<div class="span12">
+		  <b>Url:</b>
+		  <%= link_to @bookmark.url, @bookmark.url, :target => "_BLANK" %>
+  	</div>
+</div>
+<div class="row-fluid">
+	<div class="span12">
 	<b>Category:</b>
   	<%= link_to @bookmark.category.title, @bookmark.category %>
-</p>
-<p>
-	<%= image_tag @bookmark.snapshot.url(:medium) %>
-</p>
+  	</div>
+</div>
+<div class="row-fluid">
+	<div class="span12">
+		<%= image_tag @bookmark.snapshot.url(:original) %>
+  	</div>
+</div>
 
-
-
-<%= link_to 'Edit', edit_bookmark_path(@bookmark), :class => "btn" %>
-<%= link_to 'Destroy', @bookmark, method: :delete, :class => "btn", data: { confirm: 'Are you sure?' } %> 
-<%= link_to 'Back', bookmarks_path, :class => "btn" %>
+<div class="row-fluid">
+	<div class="span12">
+		<%= link_to 'Edit', edit_bookmark_path(@bookmark), :class => "btn" %>
+		<%= link_to 'Destroy', @bookmark, method: :delete, :class => "btn btn-danger", data: { confirm: 'Are you sure?' } %> 
+		<%= link_to 'Back', bookmarks_path, :class => "btn" %>
+	</div>
+</div>

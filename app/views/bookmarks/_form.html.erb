@@ -16,14 +16,14 @@
  	<div class="control-group">
   	  <%= f.label :url, :class => "control-label"  %>
 	<div class="controls">
-     	<%= f.text_field :url, :class => "input-xxlarge" %>
+     	<%= f.text_field :url, :class => "input-xxlarge", :placeholder => "Page URL" %>
 	</div>
 	</div>
 	
 	<div class="control-group">
 	  <%= f.label :description, :class => "control-label" %>
 	<div class="controls">
-      <%= f.text_area :description, :rows=>5, :class => "input-xxlarge" %>
+      <%= f.text_area :description, :rows=>5, :class => "input-xxlarge", :placeholder => "Bookmark description" %>
   	</div>
 	</div>
 
@@ -31,9 +31,8 @@
     <%= f.label :snapshot, :class => "control-label" %>
 	<div class="controls">
     <%= f.file_field :snapshot %>
-    
-	or	
-    <%= text_field_tag "image_url" %>
+   	or 
+    <%= text_field_tag "image_url", nil, :placeholder => "Image URL" %>
 	</div>
 	</div>
 	

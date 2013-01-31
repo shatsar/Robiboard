@@ -22,7 +22,7 @@
 	<%= f.text_field :title %>
 
 	<%= f.label :parent%>
-	<%= f.select :parent_id, nested_set_options(Category, @category) {|i, level| "#{'-' * level} #{i.title}" }.unshift(["No Parent", nil]) %>
+	<%= f.select :parent_id, sorted_nested_set_options(Category, :title, @category) {|i, level| "#{'-' * level} #{i.title}" }.unshift(["No Parent", nil]) %>
 
 	<div class="form-actions">
 		<%= f.submit :class=>"btn btn-primary" %>

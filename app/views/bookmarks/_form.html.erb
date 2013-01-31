@@ -40,7 +40,7 @@
 	<div class="control-group">
     <%= f.label :category_id, :class => "control-label" %>
 	<div class="controls">
-	<%= f.select :category_id, nested_set_options(Category, @category) {|i, level| "#{'-' * level} #{i.title}" } %>
+	<%= f.select :category_id, sorted_nested_set_options(Category, :title, @category){|i, level| "#{'-' * level} #{i.title}" } %>
 </div>
 	</div>
   <div class="form-actions">

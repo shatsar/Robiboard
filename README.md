@@ -1,9 +1,9 @@
-= Robiboard
+# Robiboard
 My wife wanted a private, visual, web-based bookmarking tool with nested categories.
 
 A sort of Pinterest with unlimited, nested private boards.
 
-Here it is:
+Here it is (features/screenshots):
 
 - Homepage with endless scrolling with every bookmark you added
 
@@ -14,6 +14,8 @@ Here it is:
 - Add nested categories
 
 
+## Tech
+It is a rails 3 app, with bootstrap, jquery, masonry
 
-== Run
+## Run
 It is a rails 3 app, so you can clone it, bundle install and rails server

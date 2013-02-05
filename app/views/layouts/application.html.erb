@@ -20,10 +20,16 @@
   </head>
   <body>
 	<div id="wrap">
-    <div class="navbar navbar-fluid-top">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container-fluid">
+        <div class="container">
+		<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="brand" href="/">Robiboard</a>
+		  <div class="nav-collapse collapse">
             <ul class="nav">
               <li><%= link_to "+Bookmark", new_bookmark_path  %></li>
               <li><%= link_to "Categories", categories_path  %></li>
@@ -35,11 +41,12 @@
             	<button type="submit" class="btn">Search</button>
             	</div>
             <% end %>
+			</div>
         </div>
       </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="main-container">
           <%= bootstrap_flash %>
           <%= yield %>
       <div id="push"></div>

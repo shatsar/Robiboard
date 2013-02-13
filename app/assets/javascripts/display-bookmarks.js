@@ -30,3 +30,9 @@ $(function() {
 		}
 	});
 }); 
+
+$('.bookmark').hover(function() {
+	$(this).find('.details').fadeIn('fast');
+}, function() {
+	$(this).find('.details').fadeOut('fast');
+});

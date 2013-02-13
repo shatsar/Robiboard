@@ -19,3 +19,20 @@ $amount: 6px;
 	float: left;
 	clear:both;
 }
+#new-category i {
+	font-size: 80px;
+	padding-right: 0px;
+}
+#new-category a:hover {
+	text-decoration: none;
+}
+
+#new-category a {
+	line-height: 100px;
+	display: block;
+	background-color: white;
+	width: 100px;
+	height: 100px;
+	font-size: 90px;
+	text-align: center;
+}

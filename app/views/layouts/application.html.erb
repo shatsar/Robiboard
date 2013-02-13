@@ -31,7 +31,10 @@
           <a class="brand" href="/">Robiboard</a>
 		  <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><%= link_to "+Bookmark", new_bookmark_path  %></li>
+              <li><%= link_to new_bookmark_path(:category_id => (@category.id if @category)) do %>
+			  		<i class="icon-plus"></i>Bookmark
+				  <% end %>
+			  </li>
               <li><%= link_to "Categories", categories_path  %></li>
             </ul>
             

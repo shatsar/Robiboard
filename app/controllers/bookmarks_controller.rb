@@ -26,6 +26,7 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/new.json
   def new
     @bookmark = Bookmark.new
+	@bookmark.category_id = params[:category_id]
 
     respond_to do |format|
       format.html # new.html.erb

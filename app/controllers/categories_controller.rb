@@ -25,6 +25,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new.json
   def new
     @category = Category.new
+	@category.parent_id = params[:parent_id]
 
     respond_to do |format|
       format.html # new.html.erb

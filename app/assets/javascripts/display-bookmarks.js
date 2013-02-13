@@ -2,6 +2,10 @@ $(window).load(function(){
   $('#bookmarks-container').masonry({
     itemSelector : '.bookmark'
   });
+  
+  $('#subcategories-container').masonry({
+  	    itemSelector : '.category'
+  });
 })
 
 $(window).resize(function() {

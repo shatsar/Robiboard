@@ -6,7 +6,7 @@ A sort of Pinterest with unlimited, nested private boards.
 Here it is (features/screenshots):
 
 - Homepage with endless scrolling with every bookmark you added
-
+![Robiboard Homepage](https://raw.github.com/shatsar/Robiboard/master/doc/homepage.png)
 
 - Add a new bookmark with local image or a remote url [powered by paperclip](https://github.com/thoughtbot/paperclip)
 

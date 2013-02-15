@@ -9,9 +9,11 @@ Here it is (features/screenshots):
 ![Robiboard Homepage](https://raw.github.com/shatsar/Robiboard/master/doc/homepage.png)
 
 - Add a new bookmark with local image or a remote url [powered by paperclip](https://github.com/thoughtbot/paperclip)
+![Robiboard Add Bookmark](https://raw.github.com/shatsar/Robiboard/master/doc/new_bookmark.png)
 
 
 - Add nested categories
+![Robiboard Add Category](https://raw.github.com/shatsar/Robiboard/master/doc/new_category.png)
 
 
 Browsing your bookmarks will be visual (via thumbnails), easy and flexible:

@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$amount: 6px;
+$img-width: 300px;
 
 .bookmark {
   margin: 3px;
@@ -15,9 +15,12 @@ $amount: 6px;
 
 .bookmark p {
   padding: 0 5px;
+  width: $img-width;
 }
-.bookmark a {
+
+.bookmark > a {
 	text-align: center;
+	display: block;
 }
 
 .bookmark p.details a:hover{
@@ -34,7 +37,9 @@ $amount: 6px;
 	left: 0;
 	margin-bottom: 0;
 	display: none;
+	width: auto;
 }
+
 #bookmarks-container {
 	clear:both;
 }

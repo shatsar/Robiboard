@@ -23,23 +23,6 @@ $img-width: 300px;
 	display: block;
 }
 
-.bookmark p.details a:hover{
-	text-decoration: none;
-}
-.bookmark p.details {
-	position: absolute;
-	background: rgba(255,255,255,0.7);
-	margin-top:-30px;
-	height: 30px;
-	text-align: right;
-	float: right;
-	right: 0;
-	left: 0;
-	margin-bottom: 0;
-	display: none;
-	width: auto;
-}
-
 #bookmarks-container {
 	clear:both;
 }

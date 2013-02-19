@@ -42,3 +42,21 @@ body {
 .button-box {
   text-align: right;
 }
+
+p.details {
+    position: absolute;
+    background: rgba(255,255,255,0.7);
+    margin-top:-30px;
+    height: 30px;
+    text-align: right;
+    float: right;
+    right: 0;
+    left: 0;
+    margin-bottom: 0;
+    display: none;
+    width: auto;
+}
+
+p.details a:hover{
+  text-decoration: none;
+}

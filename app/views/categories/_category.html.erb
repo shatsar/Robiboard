@@ -1,7 +1,9 @@
 <div class="category">
-	<p>
-		<%= image_tag(category.bookmarks.last.snapshot.url(:thumb), :class => "img-rounded") unless category.bookmarks.empty? %>
-	</p>
+	<%= image_tag(category.bookmarks.last.snapshot.url(:thumb), :class => "img-rounded") unless category.bookmarks.empty? %>
 	<p><%= category.title %></p>
-	<p><%= link_to "view", category %></p>
+	<p class="details">
+		<%= link_to category  do %>
+			<i class="icon-zoom-in"></i>
+		<% end %>
+	</p>
 </div>

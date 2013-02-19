@@ -31,7 +31,7 @@ $(function() {
 	});
 }); 
 
-$('.bookmark').hover(function() {
+$('.bookmark,.category').hover(function() {
 	$(this).find('.details').fadeIn('fast');
 }, function() {
 	$(this).find('.details').fadeOut('fast');

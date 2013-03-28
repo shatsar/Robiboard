@@ -31,8 +31,10 @@
     <%= f.label :snapshot, :class => "control-label" %>
 	<div class="controls">
     <%= f.file_field :snapshot %>
-   	or 
-    <%= text_field_tag "image_url", nil, :placeholder => "Image URL" %>
+	    <div class="pull-right">
+	   	or 
+	    <%= text_field_tag "image_url", nil, :placeholder => "Image URL" %>
+		</div>
 	</div>
 	</div>
 	

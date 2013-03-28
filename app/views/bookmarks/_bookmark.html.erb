@@ -1,6 +1,6 @@
 <div class="bookmark thumbnail">
 	<%= link_to image_tag(bookmark.snapshot.url(:medium), :class => "img-rounded"), bookmark.url, :target => "_BLANK" %>
-	<p><%= bookmark.description %></p>	
+	<p class="description"><%= bookmark.description %></p>	
 	<p class="details">
 		<%= link_to  bookmark  do %>
 			<i class="icon-zoom-in"></i>

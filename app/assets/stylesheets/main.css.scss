@@ -58,3 +58,9 @@ p.details {
 p.details a:hover{
   text-decoration: none;
 }
+
+.thumbnail {
+	transition: none;
+	-webkit-transition:none;
+	-moz-transition:none;
+}

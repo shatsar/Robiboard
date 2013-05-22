@@ -32,8 +32,7 @@ $(function() {
 }); 
 
 $('.bookmark,.category').hover(function() {
-	var detailsHeight = $(this).find('.description').height() + 10;
-	$(this).find('.details').height(detailsHeight).css('margin-top',detailsHeight*-1).fadeIn('fast');
+	$(this).find('.details').fadeIn('fast');
 }, function() {
 	$(this).find('.details').fadeOut('fast');
 });

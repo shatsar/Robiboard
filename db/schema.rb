@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130116024005) do
+ActiveRecord::Schema.define(:version => 20130708132747) do
 
   create_table "bookmarks", :force => true do |t|
     t.text     "description"
@@ -32,6 +32,9 @@ ActiveRecord::Schema.define(:version => 20130116024005) do
     t.integer  "parent_id"
     t.integer  "lft"
     t.integer  "rgt"
+    t.string   "slug"
   end
+
+  add_index "categories", ["slug"], :name => "index_categories_on_slug", :unique => true
 
 end

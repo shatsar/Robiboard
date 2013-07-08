@@ -18,3 +18,4 @@ gem 'nested_set'
 gem "paperclip", "~> 3.0"
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
+gem "friendly_id", "~> 4.0"

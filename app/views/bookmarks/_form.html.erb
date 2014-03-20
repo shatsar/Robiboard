@@ -41,7 +41,7 @@
 	
 	<div class="form-group">
     <%= f.label :category_id, :class => "control-label" %>
-	<%= f.select :category_id, sorted_nested_set_options(Category, :title, @category){|i, level| "#{'-' * level} #{i.title}" }, {}, { :class =>"form-control"} %>
+	<%= f.select :category_id, sorted_nested_set_options(Category, :title, @category){|i, level| "#{'-' * level} #{i.title}" }, {}, { :class =>"form-control", "data-live-search"=>"true"} %>
 	</div>
   <div class="form-group">
     <%= f.submit :class=>"btn btn-info" %>

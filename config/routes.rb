@@ -2,6 +2,7 @@ Robiboard::Application.routes.draw do
   resources :categories
   resources :bookmarks
   root :to => redirect("/bookmarks")
+  get '/search' => 'search#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

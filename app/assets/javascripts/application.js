@@ -17,4 +17,5 @@
 
 $(document).ready(function() {
 $('select#bookmark_category_id').selectpicker();
+$('select#category_parent_id').selectpicker();
 });

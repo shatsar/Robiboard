@@ -1,21 +1,19 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '4.0.2'
 gem 'sqlite3'
+gem 'protected_attributes'
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+gem 'sass-rails',   '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
   
-  gem "therubyracer"
-  gem "less-rails"
-  gem 'twitter-bootstrap-rails'
-end
+gem "therubyracer"
+gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'jquery-rails'
 gem 'nested_set'
 gem "paperclip", "~> 3.0"
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
-gem "friendly_id", "~> 4.0"
+gem "friendly_id", "~> 5.0.0"

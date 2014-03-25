@@ -1,4 +1,4 @@
-<%= form_for(@bookmark, :html => {:class => "form-horizontal"}) do |f| %>
+<%= form_for(@bookmark, :html => {:class => "form-horizontal", :role => "form"}) do |f| %>
 	<fieldset>
 		
 	<legend>Bookmark</legend>
@@ -13,38 +13,37 @@
       </ul>
     </div>
   <% end %>
- 	<div class="control-group">
+ 	<div class="form-group">
   	  <%= f.label :url, :class => "control-label"  %>
-	<div class="controls">
-     	<%= f.text_field :url, :class => "input-xxlarge", :placeholder => "Page URL" %>
-	</div>
+      <%= f.text_field :url, :class => "form-control", :placeholder => "Page URL" %>
 	</div>
 	
-	<div class="control-group">
+ 	<div class="form-group">
 	  <%= f.label :description, :class => "control-label" %>
-	<div class="controls">
-      <%= f.text_area :description, :rows=>5, :class => "input-xxlarge", :placeholder => "Bookmark description" %>
-  	</div>
+      <%= f.text_area :description, :rows=>5, :class => "form-control", :placeholder => "Bookmark description" %>
 	</div>
 
-	<div class="control-group">
+	<div class="form-group" id="snapshot-upload">
+	<div class="col-md-12">
     <%= f.label :snapshot, :class => "control-label" %>
-	<div class="controls">
+	</div>
+	<div class="col-md-5">
     <%= f.file_field :snapshot %>
-	    <div class="pull-right">
+	</div>
+	<div class="col-md-2">
 	   	or 
-	    <%= text_field_tag "image_url", nil, :placeholder => "Image URL" %>
-		</div>
+	</div>
+
+	<div class="col-md-5">
+	    <%= text_field_tag "image_url", nil, :placeholder => "Image URL", :class => "form-control" %>
 	</div>
 	</div>
 	
-	<div class="control-group">
+	<div class="form-group">
     <%= f.label :category_id, :class => "control-label" %>
-	<div class="controls">
-	<%= f.select :category_id, sorted_nested_set_options(Category, :title, @category){|i, level| "#{'-' * level} #{i.title}" } %>
-</div>
+	<%= f.select :category_id, sorted_nested_set_options(Category, :title, @category){|i, level| i.self_and_ancestors.map(&:title).join ' > '}, {}, { :class =>"form-control", "data-live-search"=>"true"} %>
 	</div>
-  <div class="form-actions">
+  <div class="form-group">
     <%= f.submit :class=>"btn btn-info" %>
   </div>
 	</fieldset>

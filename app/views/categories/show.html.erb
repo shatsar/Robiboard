@@ -1,5 +1,5 @@
 <% unless @category.ancestors.empty? %>
-<div class="row-fluid">
+<div class="row">
 	<ul class="breadcrumb">
 	<% @category.ancestors.each do |ancestor|%>
 		<li>
@@ -12,19 +12,19 @@
 </div>
 <% end%>
 
-<div class="row-fluid">
-	<div class="span10">
+<div class="row">
+	<div class="col-md-10">
 		<h3>
 		  <%= @category.title %>
 		</h3>
   	</div>
-  	<div class="span2 pull-right button-box">
-		<%= link_to 'Edit', edit_category_path(@category), :class => "btn" %>
+  	<div class="col-md-2 pull-right button-box">
+		<%= link_to 'Edit', edit_category_path(@category), :class => "btn btn-default" %>
   	</div>
 </div>
 
-<div class="row-fluid">
-	<div class="span12" id="subcategories-container">
+<div class="row">
+	<div class="col-md-12" id="subcategories-container">
 		<%= render @category.children %>
 		<%= render "new_category" %>
 	</div>

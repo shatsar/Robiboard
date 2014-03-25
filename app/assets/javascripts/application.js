@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
+//= require bootstrap
 //= require_tree .
+
+$(document).ready(function() {
+$('select#bookmark_category_id').selectpicker();
+$('select#category_parent_id').selectpicker();
+});

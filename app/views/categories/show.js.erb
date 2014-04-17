@@ -1,0 +1,14 @@
+$("#bookmarks-container").append("<%= j render(@bookmarks) %>").imagesLoaded(function() {
+	$("#bookmarks-container").masonry( 'reload' );
+	
+	$('.bookmark').hover(function() {
+   		$(this).find('.details').fadeIn('fast');
+	}, function() {
+    	$(this).find('.details').fadeOut('fast');
+	});
+})
+<% if @bookmarks.next_page %>
+$('.pagination').replaceWith('<%= j will_paginate(@bookmarks) %>');
+<% else %>
+$('.pagination').remove();
+<% end %>

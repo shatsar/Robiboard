@@ -16,6 +16,7 @@ class CategoriesController < ApplicationController
     @category = Category.friendly.find(params[:id])
     @bookmarks = @category.bookmarks.paginate :page => params[:page]
     respond_to do |format|
+	  format.js
       format.html # show.html.erb
       format.json { render json: @category }
     end

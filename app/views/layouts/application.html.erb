@@ -20,6 +20,7 @@
   </head>
   <body>
 	<div id="wrap">
+	<% if user_signed_in? %>
     <div class="navbar  navbar-default navbar-fixed-top">
       <div class="navbar-header">
 		   <a class="navbar-brand" href="/">Robiboard</a>
@@ -46,6 +47,7 @@
             <% end %>
 			</div>
     </div>
+	<% end %>
 
     <div class="container-fluid" id="main-container">
           <%= yield %>

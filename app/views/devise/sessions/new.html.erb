@@ -1,0 +1,44 @@
+
+
+<div class="well">
+	<h2>Login here</h2>
+              <div id="myTabContent" class="tab-content">
+                <div class="tab-pane active in" id="login">
+				<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "form-horizontal", :role => "form"}) do |f| %>
+                      <div class="form-group">
+                        <!-- Username -->
+                        <%= f.label :email, :class=>"col-lg-2 control-label" %>
+						<div class="col-lg-10">
+  							<%= f.email_field :email, :autofocus => true, :class=>"form-control" %>
+						</div>
+                      </div>
+ 
+                      <div class="form-group">
+                        <!-- Password-->
+  <%= f.label :password, :class=>"col-lg-2 control-label" %>
+						<div class="col-lg-10">
+  <%= f.password_field :password, :class=>"form-control" %>
+                      	</div>
+                      </div>
+<div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <div class="checkbox">
+ 
+  <% if devise_mapping.rememberable? -%>
+    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+  <% end -%>
+                      </div>
+                      	</div>
+                      </div>
+
+					<div class="form-group">
+    					<div class="col-lg-offset-2 col-lg-10">
+ 							<%= f.submit "Sign in",:class=>"btn btn-success" %>
+                        </div>
+                      </div>
+					<% end %>
+                </div>
+                <div class="tab-pane fade" id="create">
+                </div>
+</div>
+</div>

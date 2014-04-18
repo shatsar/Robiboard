@@ -1,4 +1,5 @@
 Robiboard::Application.routes.draw do
+  devise_for :users
   resources :categories
   resources :bookmarks
   root :to => redirect("/bookmarks")

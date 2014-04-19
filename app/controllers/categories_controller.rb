@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.roots.order("title ASC")
+    @categories = Category.where(parent_id:nil).order("title ASC")
 
     respond_to do |format|
       format.html # index.html.erb

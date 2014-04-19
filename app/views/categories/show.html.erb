@@ -25,7 +25,7 @@
 
 <div class="row">
 	<div class="col-md-12" id="subcategories-container">
-		<%= render @category.children %>
+		<%= render @category.children.order("title ASC") %>
 		<%= render "new_category" %>
 	</div>
 </div>

@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.roots
+    @categories = Category.roots.order("title ASC")
 
     respond_to do |format|
       format.html # index.html.erb

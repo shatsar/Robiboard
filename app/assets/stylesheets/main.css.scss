@@ -29,7 +29,7 @@ footer {
 }
 
 body {
-	background-image: image-url("background.png");
+	background-image: url(image-path("background.png"));
 	background-repeat: repeat; 
 }
 

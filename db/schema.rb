@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 20140418092708) do
 
   create_table "bookmarks", force: true do |t|
     t.text     "description"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "category_id"
     t.string   "snapshot_file_name"
     t.string   "snapshot_content_type"
@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20140418092708) do
 
   create_table "categories", force: true do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "parent_id"
     t.integer  "lft"
     t.integer  "rgt"

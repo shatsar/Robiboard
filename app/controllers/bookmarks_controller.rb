@@ -44,9 +44,9 @@ class BookmarksController < ApplicationController
   def create
     @bookmark = Bookmark.new(params[:bookmark])
     unless params[:image_url].empty?
-        @bookmark.load_snapshot params[:image_url] 
+        @bookmark.load_snapshot params[:image_url]
     end
-    
+
     respond_to do |format|
       if @bookmark.save
         format.html { redirect_to @bookmark, notice: 'Bookmark was successfully created.' }
@@ -62,6 +62,10 @@ class BookmarksController < ApplicationController
   # PUT /bookmarks/1.json
   def update
     @bookmark = Bookmark.find(params[:id])
+
+    unless params[:image_url].empty?
+        @bookmark.load_snapshot params[:image_url]
+    end
 
     respond_to do |format|
       if @bookmark.update_attributes(params[:bookmark])
